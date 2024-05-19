@@ -121,21 +121,21 @@
             <div><h1 style="display: inline-block;">Create an account</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="login.jsp">Log In</a></p></div>
             <br>
         <form method="POST" action="">
-            <input type="text" id="fname" placeholder="First name">
-            <input type="text" id="lname" placeholder="Last name">
+            <input type="text" id="fname" name="fname" placeholder="First name">
+            <input type="text" id="lname" name="lname" placeholder="Last name">
             <br><br>
-            <input type="email" id="email" placeholder="Enter your Email ID">
+            <input type="email" id="email" name="email" placeholder="Enter your Email ID">
             <br><br>
-            <input type="number" id="number" placeholder="Enter your phone number">
+            <input type="number" id="number" name="phnumber" placeholder="Enter your phone number">
             <br><br>
             <input type="radio" value="male" name="gender">
             <label for="male" name="gender">Male</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <input type="radio" value="female" name="gender">
             <label for="female" name="gender">Female</label>
             <br><br>
-            Date of Birth &emsp;<input type="date" id="dob">
+            Date of Birth &emsp;<input type="date" id="dob" name="dob">
             <br><br>
-            <input type="password" id="password" placeholder="Create your password">
+            <input type="password" id="password" name="password" placeholder="Create your password">
             <br><br>
             <input type="password" id="password" placeholder="Re-Enter your password">
             <br><br>
