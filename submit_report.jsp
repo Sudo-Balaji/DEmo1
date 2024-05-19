@@ -6,13 +6,13 @@
 String category = request.getParameter("category");
 String description = request.getParameter("description");
 String location = request.getParameter("location");
-Timestamp reportdate = new Timestamp(System.currentTimeMillis());
+Timestamp report_date = new Timestamp(System.currentTimeMillis());
 String latitude = request.getParameter("latitude");
 String longitude = request.getParameter("longitude");
 
 
 // Database connection parameters
-String url = "jdbc:mysql://localhost:3306/home?useSSL=false";
+String url = "jdbc:mysql://localhost:3306/urbanfix?useSSL=false";
 String username = "root";
 String password = "Chellam25@yahoo.com";
 
@@ -26,20 +26,20 @@ try {
     conn = DriverManager.getConnection(url, username, password);
 
     // SQL query to insert data into the database
-    String sql = "INSERT INTO user_reports (category, description, location, reportdate, latitude, longitude) VALUES (?, ?, ?, ?, ?, ?)";
+    String sql = "INSERT INTO user_reports (category, description, location, latitude, longitude, report_date) VALUES (?, ?, ?, ?, ?, ?)";
     pstmt = conn.prepareStatement(sql);
     pstmt.setString(1, category);
-    pstmt.setString(2, description);
+    pstmt.setString(2, description);				
     pstmt.setString(3, location);
-    pstmt.setTimestamp(4,reportdate);
-	pstmt.setString(5,latitude);
-	pstmt.setString(6,longitude);
+    pstmt.setString(4,latitude);
+	pstmt.setString(5,longitude);
+	pstmt.setTimestamp(6,report_date);
     // Execute the query
     int rowsAffected = pstmt.executeUpdate();
 
     if (rowsAffected > 0) {
         // Report submitted successfully
-        response.sendRedirect("index.html");
+        response.sendRedirect("Main_index.jsp");
     } else {
         // Report not submitted
         out.println("Report not submitted else ");
