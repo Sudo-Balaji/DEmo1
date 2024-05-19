@@ -103,6 +103,19 @@
       </style>
 </head>
 <body>
+		<input type="hidden" id="status" value= "<%= request.getAttribute("status") %>" >
+		
+		<script>
+		var status=document.getElementById("status").value;
+		if(status=="success")
+			{
+			
+			alert("Account Regestered Successfulyy"); // working
+			console.log("Succcessfully regestred");  // console line not working check
+			
+			}
+		</script>
+
     <div class="header">
         <nav>
             <h1 style="color: rgb(31, 226, 200);"> Urban</h1>
