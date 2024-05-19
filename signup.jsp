@@ -120,7 +120,7 @@
         <div class="box">
             <div><h1 style="display: inline-block;">Create an account</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="login.jsp">Log In</a></p></div>
             <br>
-        <form method="POST" action="">
+        <form method="POST" action="signup">
             <input type="text" id="fname" name="fname" placeholder="First name">
             <input type="text" id="lname" name="lname" placeholder="Last name">
             <br><br>
