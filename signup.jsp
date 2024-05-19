@@ -137,9 +137,9 @@
             <input type="text" id="fname" name="fname" placeholder="First name">
             <input type="text" id="lname" name="lname" placeholder="Last name">
             <br><br>
-            <input type="email" id="email" name="email" placeholder="Enter your Email ID">
+            <input type="email" id="email" name="email" placeholder="Enter your Email ID" >
             <br><br>
-            <input type="number" id="number" name="phnumber" placeholder="Enter your phone number">
+            <input type="number" id="number" name="phnumber" placeholder="Enter your phone number" >
             <br><br>
             <input type="radio" value="male" name="gender">
             <label for="male" name="gender">Male</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
