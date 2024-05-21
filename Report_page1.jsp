@@ -1,4 +1,13 @@
 
+<%
+if(session.getAttribute("name")==null)
+{
+	response.sendRedirect("login.jsp");
+	}
+%>
+
+
+
 <html>
 <head>
     
@@ -6,7 +15,7 @@
 </head>
 <body>
    <center> <h2>Report a Problem</h2> </center>
-   
+ <h3>WELCOME,   <%= session.getAttribute("name") %> </h3>
      <form action="submit_report.jsp" method="POST">
         <label for="category"> Category: </label>
          <select id="category" name="category">

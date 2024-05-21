@@ -108,8 +108,12 @@
         }
       
       </style>
+      
+      
 </head>
 <body>
+      
+		
     <div class="header">
         <nav>
             <h1 style="color: rgb(31, 226, 200);"> Urban</h1>
@@ -127,7 +131,7 @@
         <div class="box">
             <div><h1 style="display: inline-block;">Log In</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="signup.jsp">Create an account</a></p></div>
             <br>
-          <form>
+          <form action="login" method="POST">
           <h3 class="email">Email address</h3>
             <input type="email" name="mail" id="mail">
             <br><br>
@@ -140,5 +144,18 @@
          
     </div>
     <div class="content"></div>
+    
+    <input type="hidden" id="status" value= "<%= request.getAttribute("status") %>" >
+      
+      <script>
+		var status=document.getElementById("status").value;
+		if(status=="failed")
+			{
+			
+			alert("Soryy!!, Wrong Username or Password"); // working
+			}
+		
+		</script>
+    
 </body>
 </html>
