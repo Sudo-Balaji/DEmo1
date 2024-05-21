@@ -2,9 +2,11 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.text.SimpleDateFormat"%> 
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" >
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -91,9 +93,9 @@
         }
         .reports{
             background-color:white;
-            height:500px;
-            width:1000px;
-           margin-left:14% ;
+            height:550px;
+            width:1100px;
+           margin-left:12% ;
            margin-top: -70px;
            position: absolute;
            z-index: 2;

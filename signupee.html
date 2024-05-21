@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
+	  <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,27 +106,14 @@
       </style>
 </head>
 <body>
-		<input type="hidden" id="status" value= "<%= request.getAttribute("status") %>" >
-		
-		<script>
-		var status=document.getElementById("status").value;
-		if(status=="success")
-			{
-			
-			alert("Account Regestered Successfulyy"); // working
-			
-			
-			}
-		</script>
-
     <div class="header">
         <nav>
             <h1 style="color: rgb(31, 226, 200);"> Urban</h1>
             <h1>Fix</h1>
         </nav>
         <ul>
-            <li> <a href="Main_index.jsp">Home |</a></li>
-            <li> <a href="login.jsp">Log In |</a></li>
+            <li> <a href="home.html">Home |</a></li>
+            <li> <a href="login.html">Log In |</a></li>
             <li> <a href="">All reports |</a></li>
             <li> <a href="">About us |</a></li>
             <li> <a href="">Contact</a></li>
@@ -134,32 +121,31 @@
     </div>
     <div class="signin" >
         <div class="box">
-            <div><h1 style="display: inline-block;">Create an account</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="login.jsp">Log In</a></p></div>
+            <div><h1 style="display: inline-block;">Create an account</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="login.html">Log In</a></p></div>
             <br>
-        <form method="POST" action="signup">
-            <input type="text" id="fname" name="fname" placeholder="First name">
-            <input type="text" id="lname" name="lname" placeholder="Last name">
+        <form>
+            <input type="text" id="fname" placeholder="First name">
+            <input type="text" id="lname" placeholder="Last name">
             <br><br>
-            <input type="email" id="email" name="email" placeholder="Enter your Email ID" >
+            <input type="email" id="email" placeholder="Enter your Email ID">
             <br><br>
-            <input type="number" id="number" name="phnumber" placeholder="Enter your phone number" >
+            <input type="number" id="number" placeholder="Enter your phone number">
             <br><br>
             <input type="radio" value="male" name="gender">
             <label for="male" name="gender">Male</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <input type="radio" value="female" name="gender">
             <label for="female" name="gender">Female</label>
             <br><br>
-            Date of Birth &emsp;<input type="date" id="dob" name="dob">
+            Date of Birth &emsp;<input type="date" id="dob">
             <br><br>
-            <input type="password" id="password" name="password" placeholder="Create your password">
+            <input type="password" id="password" placeholder="Create your password">
             <br><br>
             <input type="password" id="password" placeholder="Re-Enter your password">
             <br><br>
              <br>
             <button>Sign Up</button>
-            </form>
             </div>
-         
+        </form> 
           
     </div>
     <div class="content"></div>
