@@ -1,9 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%
-if(session.getAttribute("name")==null)
-{
-	response.sendRedirect("login.jsp");
-	}
+// Prevent caching of this page
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0
+response.setDateHeader("Expires", 0); // Proxies
+
+ HttpSession session1 = request.getSession(false);
+
+if (session1 == null || session1.getAttribute("name") == null) {
+    response.sendRedirect("login.jsp"); // Redirect to login page if session is invalid
+    return;
+}
+
+
 %>
 
 
@@ -15,7 +25,7 @@ if(session.getAttribute("name")==null)
 </head>
 <body>
    <center> <h2>Report a Problem</h2> </center>
- <h3>WELCOME,   <%= session.getAttribute("name") %> </h3>
+ <h3>WELCOME,   <%= session1.getAttribute("name") %> </h3>
      <form action="submit_report.jsp" method="POST">
         <label for="category"> Category: </label>
          <select id="category" name="category">
@@ -29,7 +39,7 @@ if(session.getAttribute("name")==null)
             <option value="Sidewalks">Sidewalksf  </option>
             <option value="Illegal Parking">Illegal Parking </option>
             <option value="Noise Pollution">Noise Pollution </option>
-            <option value="New added line for github">Noise Pollution </option>
+            
         </select>
        
         <br/><br/>
@@ -46,6 +56,9 @@ if(session.getAttribute("name")==null)
         
         <input type="submit" value="Submit">
     </form>
+    
+    <a href="logout">Logout</a>
+    
     
     <!-- JavaScript to get user's GPS coordinates -->
     <script>
