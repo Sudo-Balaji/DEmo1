@@ -9,6 +9,8 @@ String location = request.getParameter("location");
 Timestamp report_date = new Timestamp(System.currentTimeMillis());
 String latitude = request.getParameter("latitude");
 String longitude = request.getParameter("longitude");
+String address= request.getParameter("landmark");
+String landmark= request.getParameter("address");
 
 
 // Database connection parameters
@@ -26,14 +28,16 @@ try {
     conn = DriverManager.getConnection(url, username, password);
 
     // SQL query to insert data into the database
-    String sql = "INSERT INTO user_reports (category, description, location, latitude, longitude, report_date) VALUES (?, ?, ?, ?, ?, ?)";
+    String sql = "INSERT INTO user_reports (category, description, landmark, address, location, latitude, longitude, report_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     pstmt = conn.prepareStatement(sql);
     pstmt.setString(1, category);
-    pstmt.setString(2, description);				
-    pstmt.setString(3, location);
-    pstmt.setString(4,latitude);
-	pstmt.setString(5,longitude);
-	pstmt.setTimestamp(6,report_date);
+    pstmt.setString(2, description);
+    pstmt.setString(3,landmark);
+    pstmt.setString(4,address);
+    pstmt.setString(5, location);
+    pstmt.setString(6,latitude);
+	pstmt.setString(7,longitude);
+	pstmt.setTimestamp(8,report_date);
     // Execute the query
     int rowsAffected = pstmt.executeUpdate();
 

@@ -260,7 +260,7 @@ window.onload = function() {
         </div>
 
         <ul>
-            <li> <a href="home.html">Home |</a></li>
+            <li> <a href="Main_index.jsp">Home |</a></li>
             <li> <a href="login.html">Log In |</a></li>
             <li> <a href="">All reports |</a></li>
             <li> <a href="">About us |</a></li>

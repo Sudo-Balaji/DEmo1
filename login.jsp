@@ -130,7 +130,7 @@
     </div>
     <div class="signin" >
         <div class="box">
-            <div><h1 style="display: inline-block;">Log In</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="signup.jsp">Create an account</a></p></div>
+            <div><h1 style="display: inline-block;">Log In</h1><p style="display: inline-block;">&nbsp;&nbsp;or&nbsp; <a style="color: rgb(31, 226, 200);" href="signup1.jsp">Create an account</a></p></div>
             <br>
           <form action="login" method="POST">
           <h3 class="email">Email address</h3>

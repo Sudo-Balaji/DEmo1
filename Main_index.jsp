@@ -118,7 +118,13 @@
         }
       
     </style>   
-    
+  <script>
+  function pagemove(){
+	  window.location.href = "Report_page1.jsp";
+	  
+  }
+  
+  </script>  
 </head>
 <body>
     
@@ -141,7 +147,7 @@
             <h1>REPORT YOUR PROBLEMS</h1>
             <p style="font-size:20px;">(like graffiti, fly tipping, broken paving slabs, or street lighting)
             </p><br>
-           <button>Report Now</button>
+           <button onclick="pagemove()">Report Now</button>
         </div>
     <div class="reportblock">
         <div class="reports">
@@ -176,7 +182,7 @@
                 conn = DriverManager.getConnection(url, username, password);
 
                 // SQL query to fetch data from the database
-                String sql = "SELECT category, description, location, report_date FROM user_reports";
+                String sql = "SELECT category, description, location, report_date FROM user_reports WHERE report_id >= 1 ORDER BY report_id DESC";
                 stmt = conn.createStatement();
                 rs = stmt.executeQuery(sql);
                 
